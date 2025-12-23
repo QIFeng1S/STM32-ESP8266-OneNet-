@@ -158,7 +158,7 @@ int main(void)
     Packet_JSON_Data(temperature, humidity, json_buf);
 
     static uint16_t Pub_times = 0;// 发布计数
-    if(ESP8266_MQTT_PubRaw("$sys/16DDGX7Ej6/test/thing/property/post", json_buf) == 1)
+    if(ESP8266_MQTT_PubRaw("xxx", json_buf) == 1)
     { 
         char pub_buf[35];
         Pub_times++;
@@ -269,3 +269,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
